@@ -36,4 +36,8 @@ describe('regex', () => {
     expect(/\s\s\s/.test('    ')).to.be.true;
   })
 
+  it('should equate string when a . is used to match any character', () => {
+    expect(/........../.test('twice born')).to.be.true;
+    expect(/......./.test('animate')).to.be.true;
+  })
 });
