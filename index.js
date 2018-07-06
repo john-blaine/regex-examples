@@ -40,4 +40,10 @@ describe('regex', () => {
     expect(/........../.test('twice born')).to.be.true;
     expect(/......./.test('animate')).to.be.true;
   })
+
+  it('should equate string when a + is used to match at least one additional character', () => {
+    expect(/race\w+/.test('racecar')).to.be.true;
+    expect(/racec+/.test('racecar')).to.be.true;
+    expect(/race\w+/.test('race')).to.be.false;
+  })
 });
