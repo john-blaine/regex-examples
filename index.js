@@ -24,5 +24,12 @@ describe('regex', () => {
     expect(/\d/.test(6)).to.be.true;
     expect(/\d\d/.test('23')).to.be.true;
     expect(/\d\d\d/.test('12')).to.be.false;
+  });
+
+  it('should equate string when backslash-w is used to match any word characters', () => {
+    expect(/\w\w/.test('w4')).to.be.true;
+    expect(/\w\w\w/.test('11d')).to.be.true;
   })
+
+  
 });
