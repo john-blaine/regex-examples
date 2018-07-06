@@ -14,5 +14,9 @@ describe('regex', () => {
     expect(/c[ a]t/.test('cat')).to.be.true;
   })
 
+  it('should equate strings when given a range within a character set', () => {
+    expect(/c[a-z]t/.test('cat')).to.be.true;
+    expect(/[A-Za-z]at/.test('cat')).to.be.true;
+  })
 
 });
