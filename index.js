@@ -31,5 +31,9 @@ describe('regex', () => {
     expect(/\w\w\w/.test('11d')).to.be.true;
   })
 
-  
+  it('should equate string when backslash-s is used to match whitespace characters', () => {
+    expect(/\s\s/.test('  ')).to.be.true;
+    expect(/\s\s\s/.test('    ')).to.be.true;
+  })
+
 });
