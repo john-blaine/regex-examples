@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/john-blaine/regex-examples/issues"
   },
-  "homepage": "https://github.com/john-blaine/regex-examples#readme"
+  "homepage": "https://github.com/john-blaine/regex-examples#readme",
+  "dependencies": {
+    "chai": "^4.1.2"
+  }
 }
