@@ -19,4 +19,10 @@ describe('regex', () => {
     expect(/[A-Za-z]at/.test('cat')).to.be.true;
   })
 
+  it('should equate strings when backslash-d is used to match numerals', () => {
+    expect(/\d/.test('6')).to.be.true;
+    expect(/\d/.test(6)).to.be.true;
+    expect(/\d\d/.test('23')).to.be.true;
+    expect(/\d\d\d/.test('12')).to.be.false;
+  })
 });
