@@ -1,0 +1,19 @@
+{
+  "name": "regexexamples",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "mocha index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/john-blaine/regex-examples.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/john-blaine/regex-examples/issues"
+  },
+  "homepage": "https://github.com/john-blaine/regex-examples#readme"
+}
