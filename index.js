@@ -50,5 +50,14 @@ describe('regex', () => {
   it('should equate string when a * is used to match zero or more of any character', () => {
     expect(/race*/.test('racecar')).to.be.true;
     expect(/race*/.test('race')).to.be.true;
-  })
+  });
+
+  it('should equate string when curly braces are used to match a specific number of characters', () => {
+    expect(/\d{3}-\d{3}-\d{4}/.test('970-555-3137')).to.be.true;
+    expect(/\d{3}-\d{3}-\d{4}/.test('970-555-313')).to.be.false;
+    expect(/\d{3}-\d{2}-\d{4}/.test('970-555-3137')).to.be.false;
+    expect(/\w{4}/.test('Fred')).to.be.true;
+  });
+
+
 });
