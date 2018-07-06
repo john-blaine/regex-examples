@@ -59,5 +59,10 @@ describe('regex', () => {
     expect(/\w{4}/.test('Fred')).to.be.true;
   });
 
-
+  it('should equate string when curly braces are used to match a specified range of characters', () => {
+    expect(/\w{3,5}/.test('cat')).to.be.true;
+    expect(/\w{3,5}/.test('motown')).to.be.true;
+    expect(/\w{3,}/.test('aristocats')).to.be.true;
+    expect(/\w{5,}/.test('cats')).to.be.false;
+  });
 });
