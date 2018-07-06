@@ -29,21 +29,26 @@ describe('regex', () => {
   it('should equate string when backslash-w is used to match any word characters', () => {
     expect(/\w\w/.test('w4')).to.be.true;
     expect(/\w\w\w/.test('11d')).to.be.true;
-  })
+  });
 
   it('should equate string when backslash-s is used to match whitespace characters', () => {
     expect(/\s\s/.test('  ')).to.be.true;
     expect(/\s\s\s/.test('    ')).to.be.true;
-  })
+  });
 
   it('should equate string when a . is used to match any character', () => {
     expect(/........../.test('twice born')).to.be.true;
     expect(/......./.test('animate')).to.be.true;
-  })
+  });
 
   it('should equate string when a + is used to match at least one additional character', () => {
     expect(/race\w+/.test('racecar')).to.be.true;
     expect(/racec+/.test('racecar')).to.be.true;
     expect(/race\w+/.test('race')).to.be.false;
+  });
+
+  it('should equate string when a * is used to match zero or more of any character', () => {
+    expect(/race*/.test('racecar')).to.be.true;
+    expect(/race*/.test('race')).to.be.true;
   })
 });
