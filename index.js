@@ -9,5 +9,10 @@ describe('regex', () => {
     expect(/caa?t/.test('cat')).to.be.true;
   });
 
-  
+  it('should equate strings when a character set contains a match', () => {
+    expect(/[Cc]at/.test('cat')).to.be.true;
+    expect(/c[ a]t/.test('cat')).to.be.true;
+  })
+
+
 });
